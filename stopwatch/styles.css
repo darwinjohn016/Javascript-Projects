@@ -1,0 +1,59 @@
+body{
+    display: grid;
+    place-content: center;
+    background-color: #bebebe;
+}
+
+.stopwatch{
+    margin: 1rem;
+    background-color: #bbbbbb;
+    padding: 2.5rem 3rem;
+    box-shadow: -1px -1px 15px rgba(0,0,0,0.2),
+    1px 1px 15px rgba(255,255,255,0.1);
+}
+
+h1,
+h2{
+    color: #444343;
+}
+
+h1{
+    margin-bottom: 1.5rem;
+}
+
+.timer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.timer-btn{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.timer-btn button{
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    background-color: #a5a3a3;
+    box-shadow: -1px -1px 15px rgba(0,0,0,0.1),
+    1px 1px 15px rgba(255,255,255,0.09);
+}
+
+.timer-btn button:active{
+    background-color: #959292;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+}
+
+.start-btn{
+    color: #035e03;
+}
+
+.stop-btn{
+    color: #cf2c2c;
+}
+
+.reset-btn{
+    color: #196fb9;
+}
