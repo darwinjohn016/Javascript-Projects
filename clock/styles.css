@@ -1,0 +1,34 @@
+body{
+    display: grid;
+    place-content: center;
+    background-color: #000;
+}
+
+.clock{
+    color: lime;
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+}
+
+.clock h1{
+    font-size: clamp(2rem,10vw,10rem);
+}
+
+.clock h1:last-child{
+    margin-left: 3rem;
+}
+
+@media (max-width: 1000px){
+    
+    .clock h1:last-child{
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 500px){
+    
+    .clock h1:last-child{
+        margin-left: .5rem;
+    }
+}
