@@ -1,11 +1,14 @@
 body{
     display: grid;
     place-content: center;
+    background-color: #262626;
 }
 
 .calculator{
     padding: 3rem;
-    background: green;
+    background: #27282a;
+    box-shadow: 1px 1px 15px rgba(255,255,255,0.09),
+    -1px -1px 15px rgba(0,0,0,0.5);
 }
 
 .calculator-input{
@@ -18,6 +21,7 @@ body{
 .current-input{
     padding: 0.5rem;
     text-align: end;
+    background-color: #c4c4c4;
 }
 
 .previous-input{
@@ -30,8 +34,32 @@ body{
     display: grid;
     grid-template-columns: repeat(5,60px);
     grid-template-rows: repeat(6,60px);
+    gap: 0.5rem;
+    
+
 }
 
 .calculator-btn button{
-    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 50%;
+    background: #27282a;
+    color: #c4c4c4;
+    box-shadow: 1px 1px 5px rgba(255,255,255,0.0125),
+    -1px -1px 5px rgba(0,0,0,0.2);
+}
+
+.calculator-btn [data-clear]{
+    color: #fb4b4b;
+}
+
+.calculator-btn [data-delete]{
+    color: #fffe4e;
+}
+
+
+
+.calculator-btn button:active{
+    box-shadow: inset -2px -2px 2px rgba(255,255,255,0.0125),
+    inset 2px 2px 4px rgba(0,0,0,0.2),
+    inset -2px -2px 6px rgba(255,255,255,0.0125),
+    inset 2px 2px 8px rgba(0,0,0,0.2);
 }

@@ -90,10 +90,13 @@ class Calculator{
     operation(){
 
         
-        if(this.previousInput.includes("^")) {
-            this.currentInput = Math.pow(parseFloat(this.previousInput),parseFloat(this.currentInput)).toString();
-            this.previousInput = "";
+        if(this.currentInput.includes("^")) {
+            let base = this.exponent();
+            let exponentSign = this.currentInput.indexOf("^");
+            let exponent = parseFloat(this.currentInput.slice(exponentSign + 1,this.currentInput.length-1));
+            this.currentInput = Math.pow(base,exponent);
         }
+
         else if(this.operator === "+") this.currentInput = parseFloat(this.previousInput) + parseFloat(this.currentInput);
         else if(this.operator === "-") this.currentInput = parseFloat(this.previousInput) - parseFloat(this.currentInput);
         else if(this.operator === "*") this.currentInput = parseFloat(this.previousInput) * parseFloat(this.currentInput);
@@ -132,9 +135,9 @@ class Calculator{
     }
 
     exponent(){
-        
-        this.previousInput = this.currentInput + "^";
-        this.currentInput = "";
+        this.currentInput = this.currentInput + "^";
+        let base = parseFloat(this.currentInput.slice(0,this.currentInput.length-1));
+        return base;
     }
 
     squareRoot(){
@@ -156,7 +159,6 @@ class Calculator{
     factorial(){
 
         let factorial = 1;
-
         for(let i=1; i<=this.currentInput; i++){
             factorial *= i;
         }
