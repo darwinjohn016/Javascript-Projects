@@ -34,7 +34,7 @@ body{
     display: grid;
     grid-template-columns: repeat(5,60px);
     grid-template-rows: repeat(6,60px);
-    gap: 0.5rem;
+    gap: 0.6rem;
     
 
 }
@@ -43,7 +43,7 @@ body{
     border-radius: 50%;
     background: #27282a;
     color: #c4c4c4;
-    box-shadow: 1px 1px 5px rgba(255,255,255,0.0125),
+    box-shadow: 1px 1px 5px rgba(255,255,255,0.02),
     -1px -1px 5px rgba(0,0,0,0.2);
 }
 
